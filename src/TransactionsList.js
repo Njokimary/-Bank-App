@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 function TransactionsList({ transactions }) {
   return (
     <table className='transactions-list'>
