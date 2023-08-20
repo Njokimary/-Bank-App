@@ -1,9 +1,9 @@
-// import react from 'react';
+import React from 'react';
 
-function TransactionList({ transactions }) {
-    return(
-        <table className='transactions-list'>
-        <tbody>
+function TransactionsList({ transactions }) {
+  return (
+    <table className='transactions-list'>
+      <tbody>
         <tr className='table-header'>
           <th>
             <h3 className='header-cell'>Date</h3>
@@ -18,9 +18,17 @@ function TransactionList({ transactions }) {
             <h3 className='header-cell'>Amount</h3>
           </th>
         </tr>
-        
-        </tbody>
-        </table>
-    )
+        {transactions.map((transaction, index) => (
+          <tr key={index}>
+            <td>{transaction.date}</td>
+            <td>{transaction.description}</td>
+            <td>{transaction.category}</td>
+            <td>{transaction.amount}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
 }
-export default TransactionList
+
+export default TransactionsList;
