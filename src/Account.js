@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import TransactionsList from './TransactionsList';
 import Search from './Search';
 import AddTransactionForm from './AddTransactionForm';
+import './App.css';
 
 function AccountContainer() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -27,7 +28,10 @@ function AccountContainer() {
   };
 
   return (
-    <div>
+    <div  className="container">
+      <div className="header">
+        <h1>Transaction Tracker</h1>
+      </div>
       <Search handleSearch={handleSearch} />
       <TransactionsList transactions={filteredTransactions} />
       <AddTransactionForm addTransaction={addTransaction} />
