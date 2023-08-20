@@ -9,10 +9,9 @@ function AccountContainer() {
 
   useEffect(() => {
     fetch('http://localhost:8000/transactions')
-      .then((response) => response.json())
-      .then((data) => {
-        setTransactions(data);
-      });
+      .then(response => response.json())
+      .then(data => setTransactions(data))
+      .catch(error => console.log(error));
   }, []);
 
   const handleSearch = (term) => {
