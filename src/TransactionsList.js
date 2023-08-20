@@ -1,4 +1,4 @@
-import react from 'react';
+// import react from 'react';
 
 function TransactionList({ transactions }) {
     return(
@@ -18,6 +18,7 @@ function TransactionList({ transactions }) {
             <h3 className='header-cell'>Amount</h3>
           </th>
         </tr>
+        
         </tbody>
         </table>
     )
